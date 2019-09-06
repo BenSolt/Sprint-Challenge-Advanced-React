@@ -4,6 +4,8 @@ import './App.css';
 import axios from 'axios';
 import ReactDOM from "react-dom";
 
+import PlayerCard from "../components/PlayerCard";
+
 class App extends React.Component {
 
     constructor(){
@@ -17,7 +19,7 @@ class App extends React.Component {
         console.log("first render(mounting)");
         axios
         .get("http://localhost:5000/api/players")
-        .then(res => this.setState({ user: res.data }))
+        .then(res => this.setState({ players: res.data }))
         //.catch(err => console.log("error"));
       
       }
@@ -32,7 +34,7 @@ class App extends React.Component {
 
             <h1>Womans Soccer</h1> 
 
-
+          <Player players={this.state.players}/>
 
             </div>
         
