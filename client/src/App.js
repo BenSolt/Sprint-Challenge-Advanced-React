@@ -35,7 +35,7 @@ class App extends React.Component {
         return (
             <div className="App">
 
-            <h1>Womans Soccer</h1> 
+            <h1>Womans World Cup</h1> 
 
               {/* <PlayerCard players={this.state.players}/> */}
               <div className="Slider">
@@ -48,7 +48,7 @@ class App extends React.Component {
         
           );}
 }
-    ReactDOM.render(<App />, document.getElementById('root'));
+    // ReactDOM.render(<App />, document.getElementById('root'));
 
 
 export default App;
