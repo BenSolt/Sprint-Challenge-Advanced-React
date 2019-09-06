@@ -68,6 +68,8 @@
 
 .card1{
   border: 2px solid black;
+  background: rgb(131, 111, 0);
   margin: 4%;
+  width: 400px;
 
 }

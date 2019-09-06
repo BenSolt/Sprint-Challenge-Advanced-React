@@ -7,7 +7,7 @@ const PlayerCard = ({SoccerPlayer}) => {
   <div className="cardholder">
   
   
-            {SoccerPlayer.map(players => (
+             {SoccerPlayer.map(players => (
 
             <div className= "card1"key={players.id}>
 
