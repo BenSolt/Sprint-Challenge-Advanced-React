@@ -33,3 +33,9 @@ test('contains world cup', () => {
   getByText(/world cup/i);
 });
 
+test('contains searched', async () => {
+  // Arrange
+  const { findByText } = await rtl.render(<App />);
+  // Act - getting the node by text
+  findByText(/searched/i);
+});

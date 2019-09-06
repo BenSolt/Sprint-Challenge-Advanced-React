@@ -1,31 +1,51 @@
 import React from 'react';
+import axios from 'axios';
 
-const PlayerCard = ({SoccerPlayer}) => {
-  
-    return(
-  
-  <div className="cardholder">
-  
-  
-             {SoccerPlayer.map(players => (
 
-            <div className= "card1"key={players.id}>
 
-            <h2>Name: {players.name}</h2>
-            <h2>Country: {players.country}</h2>
-            <h2>Times Searched: {players.searches}</h2> 
+class PlayerCard extends React.Component {
 
-            </div>
+  constructor(){
+    super()
+    this.state = {
+   players: []
+    };
+  }
 
-            ))}
-      
-  
-        </div>//End Card Holder
-    );
-   }
-   
-  
+  componentDidMount() {
+      console.log("first render(mounting)");
+      axios
+      .get("http://localhost:5000/api/players")
+      .then(res => this.setState({ players: res.data }))
+      //.catch(err => console.log("error"));
     
-  
+    }
+
+
+render() {
+
+  return (
+
+    <div>
+
+    {this.state.players.map(player => 
+    
+    <div className="card1">
+
+    <h2>Name: {player.name}</h2>
+    <h2>Country: {player.country}</h2>
+    <h2>Times Searched: {player.searches}</h2> 
+
+    </div>
+    
+    
+    )}
+
+    </div>   
+ 
+  )
+
+}
+}
       
   export default PlayerCard;
