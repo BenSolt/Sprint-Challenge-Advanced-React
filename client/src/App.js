@@ -38,7 +38,7 @@ class App extends React.Component {
             <h1>Womans Soccer</h1> 
 
               {/* <PlayerCard players={this.state.players}/> */}
-              <div>
+              <div className="Slider">
               <NavbarSlider/>
               </div>
              
