@@ -1,17 +1,20 @@
-import React from 'react';
-
+import React, { useState, useEffect }from 'react';
 import './App.css';
 import axios from 'axios';
 import ReactDOM from "react-dom";
 
-import PlayerCard from "../components/PlayerCard";
+//import PlayerCard from "./components/PlayerCard";
+import NavbarSlider from "./components/NavbarSlider";
+
+
+
 
 class App extends React.Component {
 
     constructor(){
       super()
       this.state = {
-       players:{}
+     players: {}
       };
     }
 
@@ -34,8 +37,13 @@ class App extends React.Component {
 
             <h1>Womans Soccer</h1> 
 
-          <Player players={this.state.players}/>
+              {/* <PlayerCard players={this.state.players}/> */}
+              <div>
+              <NavbarSlider/>
+              </div>
+             
 
+             
             </div>
         
           );}
