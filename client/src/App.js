@@ -18,8 +18,21 @@ const App = () => {
 
   return (
     <div className="App">
-      <NavbarSlider/>
-      <PlayerCard SoccerPlayer={player} />
+
+      <div className="Title">
+        <h1>Womans World Cup</h1> 
+        
+        <div className="Slider">
+        <NavbarSlider/>
+        </div>
+        
+      </div>
+    
+
+      <div className="Players">
+        <PlayerCard SoccerPlayer={player} />
+      </div>
+      
 
     </div>
   );

@@ -1,9 +1,21 @@
 
-.App{
+/* .App{
   display: flex;
   justify-content: center;
-  
+  flex-direction: column;
+ 
+} */
 
+
+.Title{
+   display: flex;
+  justify-content: center;
+  background: gray;
+}
+.Players{
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
 }
 
 .Slider{
@@ -52,9 +64,10 @@
   color: #fff;
   background-color: #313843;
   
+}
 
-  .navbar {
-    background-color: #1F2022;
-    border: none;
-  }
+.card1{
+  border: 2px solid black;
+  margin: 4%;
+
 }
