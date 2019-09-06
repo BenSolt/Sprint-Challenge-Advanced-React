@@ -1,26 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import axios from 'axios';
+import ReactDOM from "react-dom";
+
+class App extends React.Component {
+
+    constructor(){
+      super()
+      this.state = {
+       players:{}
+      };
+    }
+
+    componentDidMount() {
+        console.log("first render(mounting)");
+        axios
+        .get("http://localhost:5000/api/players")
+        .then(res => this.setState({ user: res.data }))
+        //.catch(err => console.log("error"));
+      
+      }
+
+
+
+
+    render() {
+        console.log('state', this.state)
+        return (
+            <div className="App">
+
+            <h1>Womans Soccer</h1> 
+
+
+
+            </div>
+        
+          );}
 }
+    ReactDOM.render(<App />, document.getElementById('root'));
+
 
 export default App;
