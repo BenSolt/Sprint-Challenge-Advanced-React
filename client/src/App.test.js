@@ -26,7 +26,7 @@ test('contains womans', () => {
   getByText(/womans/i);
 });
 
-test('contains womans', () => {
+test('contains world cup', () => {
   // Arrange
   const { getByText } = rtl.render(<App />);
   // Act - getting the node by text

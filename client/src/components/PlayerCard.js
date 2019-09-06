@@ -1,37 +1,27 @@
 import React from 'react';
 
-// const PlayerCard = (props) => {
+const PlayerCard = ({coinData}) => {
   
+    return(
+  
+  <div className="cardholder">
+  
+            {coinData.map(players => (
 
-   
-//     return(
-  
-//   <div className="cardholder">
-  
-//     <div className="card">
-  
-//       <h1>{props.player.name}</h1>
-//       <h2>{props.player.country}</h2>
-//       <h2>{props.player.id}</h2>
-//       <h2>{props.player.searches}</h2> 
-  
-//     </div>
-          
-  
-  
-//             {props.players.map(players => 
-//             <div className= "card2"key={players.id}>
-//                <h3>{players.user}</h3>
-          
-//           </div> )}
+            <div className= "card2"key={players.id}>
+            <h3>{players.name}</h3>
+            <h3>{players.}</h3>
+            </div>
+
+            ))}
       
   
-//         </div>//End Card Holder
-//     );
-//    }
+        </div>//End Card Holder
+    );
+   }
    
   
     
   
       
-//   export default PlayerCard;
+  export default PlayerCard;

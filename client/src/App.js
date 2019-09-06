@@ -3,13 +3,32 @@ import './App.css';
 import axios from 'axios';
 import ReactDOM from "react-dom";
 
-//import PlayerCard from "./components/PlayerCard";
+import PlayerCard from "./components/PlayerCard";
 import NavbarSlider from "./components/NavbarSlider";
 
+const App = () => {
+  const [player, setPlayer] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/players")
+      .then(res => setPlayer(res.data))
+      .catch(err => console.log(err));
+  },[]);
+
+  return (
+    <div className="Appaa">
+      
+      <PlayerCard coinData={player} />
+    </div>
+  );
+};
 
 
 
-class App extends React.Component {
+
+
+class Appa extends React.Component {
 
     constructor(){
       super()
@@ -36,8 +55,8 @@ class App extends React.Component {
             <div className="App">
 
             <h1>Womans World Cup</h1> 
-
-              {/* <PlayerCard players={this.state.players}/> */}
+             
+              <PlayerCard players={this.state.players}/> 
               <div className="Slider">
               <NavbarSlider/>
               </div>
@@ -48,7 +67,7 @@ class App extends React.Component {
         
           );}
 }
-    // ReactDOM.render(<App />, document.getElementById('root'));
-
+     ReactDOM.render(<App />, document.getElementById('root'));
+     
 
 export default App;
