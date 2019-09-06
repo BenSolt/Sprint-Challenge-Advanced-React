@@ -1,16 +1,21 @@
 import React from 'react';
 
-const PlayerCard = ({coinData}) => {
+const PlayerCard = ({SoccerPlayer}) => {
   
     return(
   
   <div className="cardholder">
   
-            {coinData.map(players => (
+  
+            {SoccerPlayer.map(players => (
 
-            <div className= "card2"key={players.id}>
-            <h3>{players.name}</h3>
-            <h3>{players.}</h3>
+            <div className= "card1"key={players.id}>
+
+            <h2>{players.name}</h2>
+            <h2>{players.country}</h2>
+            <h2>{players.id}</h2>
+            <h2>{players.searches}</h2> 
+
             </div>
 
             ))}

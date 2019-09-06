@@ -17,9 +17,10 @@ const App = () => {
   },[]);
 
   return (
-    <div className="Appaa">
-      
-      <PlayerCard coinData={player} />
+    <div className="App">
+      <NavbarSlider/>
+      <PlayerCard SoccerPlayer={player} />
+
     </div>
   );
 };
@@ -28,46 +29,46 @@ const App = () => {
 
 
 
-class Appa extends React.Component {
+// class Appa extends React.Component {
 
-    constructor(){
-      super()
-      this.state = {
-     players: {}
-      };
-    }
+//     constructor(){
+//       super()
+//       this.state = {
+//      players: {}
+//       };
+//     }
 
-    componentDidMount() {
-        console.log("first render(mounting)");
-        axios
-        .get("http://localhost:5000/api/players")
-        .then(res => this.setState({ players: res.data }))
-        //.catch(err => console.log("error"));
+//     componentDidMount() {
+//         console.log("first render(mounting)");
+//         axios
+//         .get("http://localhost:5000/api/players")
+//         .then(res => this.setState({ players: res.data }))
+//         //.catch(err => console.log("error"));
       
-      }
+//       }
 
 
 
 
-    render() {
-        console.log('state', this.state)
-        return (
-            <div className="App">
+//     render() {
+//         console.log('state', this.state)
+//         return (
+//             <div className="App">
 
-            <h1>Womans World Cup</h1> 
+//             <h1>Womans World Cup</h1> 
              
-              <PlayerCard players={this.state.players}/> 
-              <div className="Slider">
-              <NavbarSlider/>
-              </div>
+//               <PlayerCard players={this.state.players}/> 
+//               <div className="Slider">
+//               <NavbarSlider/>
+//               </div>
              
 
              
-            </div>
+//             </div>
         
-          );}
-}
-     ReactDOM.render(<App />, document.getElementById('root'));
+//           );}
+// }
+//      ReactDOM.render(<App />, document.getElementById('root'));
      
 
 export default App;
